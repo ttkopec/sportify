@@ -8,12 +8,10 @@ export default class MapComponent extends Component {
         id: 0
     };
 
-    addMarker = (latitude, longitude) => {
-        latitude = 50.05;
-        longitude = 19.90;
+    addMarker = (latLng) => {
         const _markers = this.state.markers;
         const _id = this.state.id;
-        _markers[_id] = {lat: latitude, lng: longitude};
+        _markers[_id] = latLng;
 
         this.setState({markers: _markers, id: _id + 1});
     };

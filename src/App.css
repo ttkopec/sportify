@@ -2,3 +2,16 @@
     /* TODO place fab button in bottom right corner of map */
 }
 
+.location-search-input {
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    width: 310px;
+    height: 32px;
+    margin-top: 10px;
+    padding: 0 12px;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    outline: none;
+    text-overflow: ellipsis;
+}
