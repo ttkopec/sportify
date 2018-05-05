@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
 import Map from "./Map";
+import 'react-sliding-pane/dist/react-sliding-pane.css';
 import AddEventDialog from "../dialogs/AddEventDialog";
+import EventsSlidingPanel from "../dialogs/EventsSlidingPanel"
+import GroupsSlidingPanel from "../dialogs/GroupsSlidingPanel"
+import {AwesomeButton} from 'react-awesome-button';
+import 'react-awesome-button/dist/styles.css';
 
 export default class MapComponent extends Component {
     state = {
@@ -26,6 +31,13 @@ export default class MapComponent extends Component {
                 markers={this.state.markers}
             />
             <AddEventDialog addMarker={this.addMarker}/>
+            <div id="navBar">
+                <GroupsSlidingPanel/>
+                <button className="navButton">Profile</button>
+                <EventsSlidingPanel/>
+            </div>
         </div>
+
+
     };
 }

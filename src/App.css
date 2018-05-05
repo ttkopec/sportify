@@ -15,3 +15,13 @@
     outline: none;
     text-overflow: ellipsis;
 }
+
+.navButton {
+    width: 33.3%;
+    float: left;
+    height: 2em;
+}
+
+#navBar {
+    overflow-y: hidden;
+}
