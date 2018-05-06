@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import SlidingPane from 'react-sliding-pane';
-import { AwesomeButton } from 'react-awesome-button';
+import {AwesomeButton} from 'react-awesome-button';
 import 'react-awesome-button/dist/styles.css';
-
-
+import {withStyles} from 'material-ui/styles';
+import RaisedButton from 'material-ui/RaisedButton';
 class GroupsSlidingPanel extends Component {
     state = {
         isPaneOpen: false
@@ -12,8 +12,8 @@ class GroupsSlidingPanel extends Component {
     render() {
         return (
             <div>
-                <button className="navButton" onClick={() => this.setState({isPaneOpen: true})}>Groups</button>
-
+                < RaisedButton color="primary" className="navButton"
+                               onClick={() => this.setState({isPaneOpen: true})}>Groups</RaisedButton>
                 <SlidingPane
                     className='some-custom-class'
                     overlayClassName='some-custom-overlay-class'

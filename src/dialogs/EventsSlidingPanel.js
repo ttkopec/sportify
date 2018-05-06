@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import SlidingPane from 'react-sliding-pane';
+import RaisedButton from 'material-ui/RaisedButton';
+
 
 
 class EventsSlidingPanel extends Component {
@@ -10,7 +12,7 @@ class EventsSlidingPanel extends Component {
     render() {
         return (
             <div>
-                <button className="navButton" onClick={() => this.setState({isPaneOpen: true})}>Events</button>
+                <RaisedButton className="navButton" onClick={() => this.setState({isPaneOpen: true})}>Events</RaisedButton>
 
                 <SlidingPane
                     className='some-custom-class'
