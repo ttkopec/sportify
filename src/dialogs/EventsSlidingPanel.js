@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import SlidingPane from 'react-sliding-pane';
 import RaisedButton from 'material-ui/RaisedButton';
-
+import EventList from "../lists/EventList";
 
 
 class EventsSlidingPanel extends Component {
@@ -12,7 +12,8 @@ class EventsSlidingPanel extends Component {
     render() {
         return (
             <div>
-                <RaisedButton className="navButton" onClick={() => this.setState({isPaneOpen: true})}>Events</RaisedButton>
+                <RaisedButton className="navButton"
+                              onClick={() => this.setState({isPaneOpen: true})}>Events</RaisedButton>
 
                 <SlidingPane
                     className='some-custom-class'
@@ -24,8 +25,7 @@ class EventsSlidingPanel extends Component {
                     onRequestClose={() => {
                         this.setState({isPaneOpen: false});
                     }}>
-                    <br/>
-                    <img src={'img.png'}/>
+                    <EventList/>
                 </SlidingPane>
             </div>
         );

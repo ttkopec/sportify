@@ -4,6 +4,9 @@ import {AwesomeButton} from 'react-awesome-button';
 import 'react-awesome-button/dist/styles.css';
 import {withStyles} from 'material-ui/styles';
 import RaisedButton from 'material-ui/RaisedButton';
+import GroupList from "../lists/GroupList";
+
+
 class GroupsSlidingPanel extends Component {
     state = {
         isPaneOpen: false
@@ -25,8 +28,7 @@ class GroupsSlidingPanel extends Component {
                     onRequestClose={() => {
                         this.setState({isPaneOpen: false});
                     }}>
-                    <br/>
-                    <img src={'img.png'}/>
+                    <GroupList/>
                 </SlidingPane>
             </div>
         );
