@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import SlidingPane from 'react-sliding-pane';
+import Drawer from 'material-ui/Drawer';
 import RaisedButton from 'material-ui/RaisedButton';
 import EventList from "../lists/EventList";
 
@@ -13,23 +13,17 @@ class EventsSlidingPanel extends Component {
         return (
             <div>
                 <RaisedButton className="navButton"
-                              onClick={() => this.setState({isPaneOpen: true})}>Events</RaisedButton>
-
-                <SlidingPane
-                    className='some-custom-class'
-                    overlayClassName='some-custom-overlay-class'
-                    isOpen={this.state.isPaneOpen}
-                    title='Events'
-                    width='400px'
-                    subtitle='Optional subtitle.'
-                    onRequestClose={() => {
-                        this.setState({isPaneOpen: false});
-                    }}>
+                              onClick={this.handleToggle}>Events</RaisedButton>
+                <Drawer open={this.state.isPaneOpen}
+                        openSecondary={true}
+                >
                     <EventList/>
-                </SlidingPane>
+                </Drawer>
             </div>
         );
     }
+
+    handleToggle = () => this.setState({isPaneOpen: !this.state.isPaneOpen});
 }
 
 export default EventsSlidingPanel;
