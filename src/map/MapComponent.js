@@ -6,7 +6,7 @@ import EventsSlidingPanel from "../dialogs/EventsSlidingPanel"
 import GroupsSlidingPanel from "../dialogs/GroupsSlidingPanel"
 import {AwesomeButton} from 'react-awesome-button';
 import 'react-awesome-button/dist/styles.css';
-import RaisedButton from 'material-ui/RaisedButton';
+import ProfileDialog from "../dialogs/ProfileDialog";
 
 
 export default class MapComponent extends Component {
@@ -35,7 +35,7 @@ export default class MapComponent extends Component {
             <AddEventDialog addMarker={this.addMarker}/>
             <div id="navBar">
                 <GroupsSlidingPanel/>
-                <RaisedButton className="navButton">Profile</RaisedButton>
+                <ProfileDialog/>
                 <EventsSlidingPanel/>
             </div>
         </div>

@@ -36,13 +36,11 @@ class AddEventDialog extends Component {
             <FlatButton
                 label="Ok"
                 primary={true}
-                keyboardFocused={true}
                 onClick={() => this.handleAdd(this.state.latLng)}
             />,
             <FlatButton
                 label="Cancel"
                 primary={true}
-                keyboardFocused={true}
                 onClick={this.handleClose}
             />,
         ];
