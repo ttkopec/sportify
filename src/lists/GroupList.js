@@ -61,9 +61,17 @@ class GroupList extends Component {
     }
 
     toggleGroupDetails = () => {
-        this.setState({
-            isDetails: false
-        });
+
+        if (this.state.isDetails === true) {
+            this.setState({
+                isDetails: false
+            });
+        } else {
+            this.setState({
+                isDetails: true
+            });
+
+        }
     };
 }
 
