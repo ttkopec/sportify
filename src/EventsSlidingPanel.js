@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import Drawer from 'material-ui/Drawer';
 import RaisedButton from 'material-ui/RaisedButton';
-import EventList from "../lists/EventList";
-
+import EventList from './lists/EventList';
 
 class EventsSlidingPanel extends Component {
     state = {

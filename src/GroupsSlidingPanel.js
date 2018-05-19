@@ -1,12 +1,7 @@
 import React, {Component} from 'react';
-import {AwesomeButton} from 'react-awesome-button';
-import 'react-awesome-button/dist/styles.css';
-import {withStyles} from 'material-ui/styles'
 import Drawer from 'material-ui/Drawer';
-
 import RaisedButton from 'material-ui/RaisedButton';
-import GroupList from "../lists/GroupList";
-
+import GroupList from './lists/GroupList';
 
 class GroupsSlidingPanel extends Component {
     state = {

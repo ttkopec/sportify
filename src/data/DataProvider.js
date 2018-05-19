@@ -1,9 +1,11 @@
 import {Component} from "react";
-import Event from "./Event";
-import Group from "./Group";
+import {Event, Group, EventCategory} from "./Models";
 
-class FakeDataProvider extends Component {
-
+class DataProvider extends Component {
+    static getEventCategories = () => {
+        return [new EventCategory('Category1'), new EventCategory('Category2'), new EventCategory('Category3'),
+            new EventCategory('Category4'), new EventCategory('Category5'), new EventCategory('Category6')]
+    };
 
     getEvents = () => {
         return [new Event('TestEvent1', 'TestMember1', 'TestDate1'), new Event('TestEvent1', 'TestMember1', 'TestDate1'),
@@ -18,4 +20,4 @@ class FakeDataProvider extends Component {
     };
 }
 
-export default FakeDataProvider;
+export default DataProvider;

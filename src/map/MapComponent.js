@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import Map from "./Map";
 import 'react-sliding-pane/dist/react-sliding-pane.css';
-import AddEventDialog from "../dialogs/AddEventDialog";
-import EventsSlidingPanel from "../dialogs/EventsSlidingPanel"
-import GroupsSlidingPanel from "../dialogs/GroupsSlidingPanel"
-import {AwesomeButton} from 'react-awesome-button';
+import AddEventDialog from "../dialogs/addEvent/AddEventDialog";
+import EventsSlidingPanel from "../EventsSlidingPanel"
+import GroupsSlidingPanel from "../GroupsSlidingPanel"
 import 'react-awesome-button/dist/styles.css';
 import ProfileDialog from "../dialogs/ProfileDialog";
 

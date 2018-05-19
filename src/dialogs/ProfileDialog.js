@@ -41,7 +41,7 @@ class ProfileDialog extends Component {
                 >
                     <div className={"center"}>
                         <img src={logo} className={"center"}/>
-                        <h4 className={"center-text"}>Tomasz Kopeć </h4>
+                        <h4 className={"center-text"}>Tomasz Kopeć</h4>
 
                         <p className={"center-text"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh
                             augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque
