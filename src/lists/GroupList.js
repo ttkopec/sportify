@@ -10,7 +10,7 @@ class GroupList extends Component {
 
     render() {
 
-        if (this.state.isDetails) {
+        if (!this.state.isDetails) {
             return (
                 <div onClick={this.toggleGroupDetails}>
                     <h3 style={{textAlign: 'center'}}>Groups</h3>
@@ -36,10 +36,12 @@ class GroupList extends Component {
 
                     <img src={logo} className={"center"}/>
                     <h4 className={"center-text"}>Group Name</h4>
-                    <h4 className={"center-text"}>Members</h4>
+                    <h4 className={"center-text"}>Description</h4>
                     <p className={"center-text"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh
                         augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque
                         aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec</p>
+                    <h4 className={"center-text"}>Members</h4>
+
                     <List>
                         <ListItem
                             primaryText="Member 2"
