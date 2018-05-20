@@ -4,6 +4,7 @@ import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import {List, ListItem} from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';
+import TextField from 'material-ui/TextField';
 
 class GroupList extends Component {
     state = {
@@ -19,6 +20,14 @@ class GroupList extends Component {
             return (
                 <divs>
                     <h3 style={{textAlign: 'center'}}>Groups</h3>
+
+                    <TextField
+                        style={{margin: 20 + 'px'}}
+                        placeholder="Search"
+                        onChange={(e) => this.setState({searchfor: e.target.value})}
+                        margin="normal"
+                    />
+
                     <SelectField style={{margin: 20 + 'px'}}
                                  floatingLabelText="Groups type"
                                  value={this.state.value}

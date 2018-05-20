@@ -4,6 +4,8 @@ import MenuItem from 'material-ui/MenuItem';
 import logo from './favicon.ico'
 import {List, ListItem} from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';
+import TextField from 'material-ui/TextField';
+
 
 class EventList extends Component {
     state = {
@@ -22,6 +24,14 @@ class EventList extends Component {
                 <div>
 
                     <h3 style={{textAlign: 'center'}}>Events</h3>
+
+                    <TextField
+                        style={{margin: 20 + 'px'}}
+                        placeholder="Search"
+                        onChange={(e) => this.setState({searchfor: e.target.value})}
+                        margin="normal"
+                    />
+
                     <SelectField style={{margin: 20 + 'px'}}
                                  floatingLabelText="Events type"
                                  value={this.state.value}
