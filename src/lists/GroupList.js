@@ -5,6 +5,9 @@ import MenuItem from 'material-ui/MenuItem';
 import {List, ListItem} from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';
 import TextField from 'material-ui/TextField';
+import backIcon from './back.png';
+import FontIcon from 'material-ui/FontIcon';
+import IconButton from 'material-ui/IconButton';
 
 class GroupList extends Component {
     state = {
@@ -56,6 +59,12 @@ class GroupList extends Component {
         else {
             return (
                 <div>
+                    <IconButton
+                        onClick={this.toggleGroupDetails}
+                        children={<FontIcon className="material-icons">keyboard_backspace</FontIcon>}
+                        tooltip="back"
+                        tooltipPosition="bottom-right"
+                    />
                     <h3 style={{textAlign: 'center'}}>Group Details</h3>
 
                     <img src={logo} className={"center"}/>

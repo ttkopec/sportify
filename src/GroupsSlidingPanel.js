@@ -13,7 +13,7 @@ class GroupsSlidingPanel extends Component {
             <div>
                 <RaisedButton className="navButton"
                               onClick={this.handleToggle}>Groups</RaisedButton>
-                <Drawer open={this.state.isPaneOpen}
+                <Drawer width={300} open={this.state.isPaneOpen}
                 >
                     <GroupList/>
                 </Drawer>

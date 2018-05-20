@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Drawer from 'material-ui/Drawer';
 import RaisedButton from 'material-ui/RaisedButton';
 import EventList from './lists/EventList';
+import BackIcon from './back.png'
 
 class EventsSlidingPanel extends Component {
     state = {
@@ -15,6 +16,7 @@ class EventsSlidingPanel extends Component {
                               onClick={this.handleToggle}>Events</RaisedButton>
                 <Drawer open={this.state.isPaneOpen}
                         openSecondary={true}
+                        width={300}
                 >
                     <EventList/>
                 </Drawer>
