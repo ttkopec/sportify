@@ -73,11 +73,14 @@ class EventList extends Component {
 
                     <img src={logo} className={"center"}/>
                     <h4 className={"center-text"}>Event Name</h4>
+                    <h4 className={"center-text"}>Event Date</h4>
+                    <h4 className={"center-text"}>Event Location</h4>
+
                     <h4 className={"center-text"}>Description</h4>
                     <p className={"center-text"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh
                         augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque
                         aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec</p>
-                    <h4 className={"center-text"}>Members</h4>
+                    <h4 className={"center-text"}>Participants</h4>
 
                     <List>
                         <ListItem
