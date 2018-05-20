@@ -1,19 +1,34 @@
 import React, {Component} from 'react';
 import logo from './favicon.ico'
+import SelectField from 'material-ui/SelectField';
+import MenuItem from 'material-ui/MenuItem';
 import {List, ListItem} from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';
 
 class GroupList extends Component {
     state = {
-        isDetails: false
+        isDetails: false,
+        value: 1,
+
     };
+    handleChange = (event, index, value) => this.setState({isDetails: this.state.isDetails, value: value});
 
     render() {
 
         if (!this.state.isDetails) {
             return (
-                <div onClick={this.toggleGroupDetails}>
+                <divs>
                     <h3 style={{textAlign: 'center'}}>Groups</h3>
+                    <SelectField style={{margin: 20 + 'px'}}
+                                 floatingLabelText="Groups type"
+                                 value={this.state.value}
+                                 onChange={this.handleChange}
+                    >
+                        <MenuItem value={1} primaryText="My Groups"/>
+                        <MenuItem value={2} primaryText="Recent Groups"/>
+                        <MenuItem value={3} primaryText="All Groups"/>
+                    </SelectField>
+                    <br/>
                     <List>
                         <ListItem
                             primaryText="Group 2"
@@ -27,11 +42,11 @@ class GroupList extends Component {
                             rightAvatar={<Avatar src={logo}/>}
                         />
                     </List>
-                </div>);
+                </divs>);
         }
         else {
             return (
-                <div onClick={this.toggleGroupDetails}>
+                <div>
                     <h3 style={{textAlign: 'center'}}>Group Details</h3>
 
                     <img src={logo} className={"center"}/>

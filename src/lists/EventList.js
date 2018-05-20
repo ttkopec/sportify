@@ -1,19 +1,37 @@
 import React, {Component} from 'react';
+import SelectField from 'material-ui/SelectField';
+import MenuItem from 'material-ui/MenuItem';
 import logo from './favicon.ico'
 import {List, ListItem} from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';
 
 class EventList extends Component {
     state = {
-        isDetails: false
+        isDetails: false,
+        value: 1,
     };
+
+
+    handleChange = (event, index, value) => this.setState({isDetails: this.state.isDetails, value: value});
+
 
     render() {
 
         if (!this.state.isDetails) {
             return (
-                <div onClick={this.toggleEventDetails}>
+                <div>
+
                     <h3 style={{textAlign: 'center'}}>Events</h3>
+                    <SelectField style={{margin: 20 + 'px'}}
+                                 floatingLabelText="Events type"
+                                 value={this.state.value}
+                                 onChange={this.handleChange}
+                    >
+                        <MenuItem value={1} primaryText="My Events"/>
+                        <MenuItem value={2} primaryText="Recent Events"/>
+                        <MenuItem value={3} primaryText="All Events"/>
+                    </SelectField>
+                    <br/>
                     <List>
                         <ListItem
                             primaryText="Event 2"
@@ -31,7 +49,7 @@ class EventList extends Component {
         }
         else {
             return (
-                <div onClick={this.toggleEventDetails}>
+                <div>
                     <h3 style={{textAlign: 'center'}}>Event Details</h3>
 
                     <img src={logo} className={"center"}/>
